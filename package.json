@@ -1,0 +1,75 @@
+{
+  "name": "socketcluster-sample",
+  "description": "A sample SocketCluster app",
+  "version": "1.0.0",
+  "contributors": [
+    {
+      "name": "Jonathan Gros-Dubois",
+      "email": "grosjona@yahoo.com.au"
+    }
+  ],
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.6",
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "child_process": "^1.0.2",
+    "connect": "3.0.1",
+    "crypto-js": "^4.1.1",
+    "dateformat": "^3.0.3",
+    "dotenv": "^8.2.0",
+    "errorhandler": "^1.5.1",
+    "express": "4.16.3",
+    "express-graphql": "^0.9.0",
+    "graphql": "^15.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.0.0",
+    "minimist": "1.1.0",
+    "moment-timezone": "^0.5.31",
+    "morgan": "1.7.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "nodemailer": "^6.6.3",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "pm2": "^4.4.0",
+    "redis": "^3.0.2",
+    "sc-errors": "^1.4.1",
+    "sc-framework-health-check": "^2.0.0",
+    "sc-hot-reboot": "^1.0.0",
+    "scc-broker-client": "^5.0.2",
+    "sequelize": "^5.21.13",
+    "serve-static": "1.13.2",
+    "socketcluster": "^13.1.7",
+    "socketcluster-client": "^13.0.1",
+    "twilio": "^3.66.0",
+    "winston": "^3.2.1"
+  },
+  "keywords": [
+    "websocket",
+    "server",
+    "realtime",
+    "cluster",
+    "scalable"
+  ],
+  "readmeFilename": "README.md",
+  "scripts": {
+    "lint": "eslint components && eslint utilities ",
+    "lint-fix": "eslint components --fix && eslint utilities --fix ",
+    "start-devxx": "nodemon -r dotenv/config server.js dotenv_config_path=./environments/dev.env server.js",
+    "start-dev": "nodemon server.js",
+    "start": "pm2 start server.js --name sc6604",
+    "start:docker": "node dockerwait.js && node ${SOCKETCLUSTER_MASTER_CONTROLLER:-server.js}"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "eslint": "^7.2.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^26.0.1",
+    "nodemon": "^1.19.0"
+  }
+}

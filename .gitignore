@@ -1,0 +1,23 @@
+*.zip
+*.bat
+*.txt
+*.jpg
+*.xml-
+*.xml--
+*.py
+*DS_Store
+1
+_src/*
+_out/
+image/
+logs/
+node_modules/
+assets/
+test1.js
+info.log
+
+# editor specific files
+.idea
+.vscode
+.htaccess
+components/Orig*
